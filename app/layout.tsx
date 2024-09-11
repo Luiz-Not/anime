@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
+import HeaderBar from "./components/header/HeaderBar";
 
-const geistSans = localFont({
-  src: "./public/fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./public/fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { Mulish } from 'next/font/google'
+import FooterBar from "./components/footer/FooterBar";
+
+const mulish = Mulish({
+  weight: ['400', '700', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,9 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${mulish.className} flex flex-col h-screen antialiased`}
       >
-        {children}
+        <HeaderBar />
+        <div className="overflow-auto mt-[68px]">
+          <main className="p-6 flex-1">{children}</main>
+          <FooterBar />
+        </div>
       </body>
     </html>
   );
