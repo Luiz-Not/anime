@@ -4,7 +4,7 @@ import { usePathname, useSearchParams, useRouter } from 'next/navigation'
 
 import { filters, filterButtonClassNames } from "./constants"
 
-export default function Filters({ activedFilter = 'all' }: { activedFilter?: string }) {
+export default function Filters({ activedFilter = '' }: { activedFilter?: string }) {
   const searchParams = useSearchParams()
   const pathname = usePathname()
   const { replace } = useRouter()
@@ -12,7 +12,11 @@ export default function Filters({ activedFilter = 'all' }: { activedFilter?: str
   const filterButtonHandler = (value: string) => {
     const params = new URLSearchParams(searchParams)
 
-    params.set('filter', value)
+    if (value) {
+      params.set('filter', value)
+    } else {
+      params.delete('filter')
+    }
 
     replace(`${pathname}?${params.toString()}`)
   }

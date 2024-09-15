@@ -27,8 +27,8 @@ export default function RootLayout({
         className={`${mulish.className} flex flex-col h-screen antialiased`}
       >
         <HeaderBar />
-        <div className="overflow-auto mt-[68px]">
-          <main className="p-6 flex-1">{children}</main>
+        <div className="overflow-auto mt-[68px] h-full flex flex-col">
+          <main className="p-6 flex flex-1 flex-col">{children}</main>
           <FooterBar />
         </div>
       </body>

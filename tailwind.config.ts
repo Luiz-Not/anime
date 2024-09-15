@@ -17,6 +17,13 @@ const config: Config = {
         green: "#01ADA6",
       },
     },
+    keyframes: {
+      shimmer: {
+        '100%': {
+          transform: 'translateX(100%)',
+        },
+      },
+    },
   },
   plugins: [],
 };

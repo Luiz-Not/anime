@@ -2,26 +2,26 @@ export const filterButtonClassNames = "border border-primary rounded p-2 text-pr
 
 export const filters = [{
   text: 'All formats',
-  value: 'all'
+  value: ''
 }, {
   text: 'TV Show',
-  value: 'tvshow'
+  value: 'TV'
 }, {
   text: 'Movie',
-  value: 'movie'
+  value: 'MOVIE'
 }, {
   text: 'TV Short',
-  value: 'tvshort'
+  value: 'TV_SHORT'
 }, {
   text: 'Special',
-  value: 'special'
+  value: 'SPECIAL'
 }, {
   text: 'OVA',
-  value: 'ova'
+  value: 'OVA'
 }, {
   text: 'ONA',
-  value: 'ona'
+  value: 'ONA'
 }, {
   text: 'Music',
-  value: 'music'
+  value: 'MUSIC'
 }]
