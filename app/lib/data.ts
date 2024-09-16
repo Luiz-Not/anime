@@ -1,25 +1,10 @@
 import { request } from './fetch'
+import { AnimeListData } from './types'
 
 const PER_PAGE = 12
 
-interface AnimeListData {
-  Page: {
-    media: {
-      id: number
-      title: { english: string, romaji: string }
-      averageScore: number
-      genres: string[]
-      coverImage: {
-        extraLarge: string
-      }
-    }[]
-    pageInfo: {
-      hasNextPage: boolean
-    }
-  }
-}
-
 export const getAnimeList = async (page = 1, format?: string, search?: string): Promise<AnimeListData> => {
+  // Criando um delay de 1s para visualizar os loadings
   await new Promise((resolve) => setTimeout(() => resolve(true), 1000))
   const query = `
     query ($page: Int, $perPage: Int, $format: MediaFormat, $search: String) {

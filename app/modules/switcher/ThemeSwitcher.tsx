@@ -18,7 +18,6 @@ export default function ThemeSwitcher({ theme }: { theme?: string }) {
     setChecked((prevState) => !prevState)
   }
 
-
   return (
     <div className="absolute right-[14px]">
       <input id="toggle" className="toggle" type="checkbox" checked={checked} onChange={() => onChangeHandler()} />

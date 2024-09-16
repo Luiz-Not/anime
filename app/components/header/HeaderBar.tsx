@@ -1,5 +1,5 @@
 import Logo from "../logo/Logo"
-import ThemeSwitcher from "../switcher/ThemeSwitcher"
+import ThemeSwitcher from "../../modules/switcher/ThemeSwitcher"
 
 export default function HeaderBar({ theme }: { theme?: string }) {
   return (
