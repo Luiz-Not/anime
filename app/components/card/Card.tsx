@@ -16,7 +16,7 @@ export default function Card({
 }
 ) {
   return (
-    <div style={{ backgroundImage: `url("${coverImage.extraLarge}")` }} className="anime-card relative w-full rounded-lg p-6 border boder-grayLight min-h-[270px] gap-2 flex flex-col bg-cover">
+    <div style={{ backgroundImage: `url("${coverImage.extraLarge}")` }} className="anime-card relative w-full rounded-lg p-6 min-h-[270px] gap-2 flex flex-col bg-cover">
       <div className="text-white text-2xl font-bold leading-[30px] z-10">
         {title.romaji || title.english}
       </div>

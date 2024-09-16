@@ -5,7 +5,7 @@ const shimmer =
 export function CardSkeleton() {
   return (
     <div className={`${shimmer} overflow-hidden bg-gray-100 relative w-full rounded-lg p-6 border boder-grayLight min-h-[270px] gap-2 flex flex-col`}>
-      <div className="text-white text-2xl font-bold leading-[30px] z-10 bg-gray-200 w-full text-gray-200">
+      <div className="text-2xl font-bold leading-[30px] z-10 bg-gray-200 w-full text-gray-200">
         Lorem ipsum dolor sit amet
       </div>
       <div className="flex gap-3 text-xs flex-wrap z-10">

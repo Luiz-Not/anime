@@ -7,14 +7,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
         primary: "#6324C6",
         primaryLight: "#774DC5",
         yellow: "#FFB800",
         grayLight: "#C4CAD4",
         red: "#E92151",
         green: "#01ADA6",
+        dark: "#171717"
       },
     },
     keyframes: {
@@ -26,5 +25,6 @@ const config: Config = {
     },
   },
   plugins: [],
+  darkMode: 'selector'
 };
 export default config;

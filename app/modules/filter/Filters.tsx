@@ -24,7 +24,7 @@ export default function Filters({ activedFilter = '' }: { activedFilter?: string
   const FilterButton = ({ text, value, actived }: { text: string; value: string, actived: boolean }) => (
     <button
       type="button"
-      className={`${filterButtonClassNames} ${actived ? 'text-white bg-primary' : ''}`}
+      className={`${actived ? 'text-white bg-primary !border-primary' : ''} ${filterButtonClassNames}`}
       onClick={() => filterButtonHandler(value)}
     >
       {text}

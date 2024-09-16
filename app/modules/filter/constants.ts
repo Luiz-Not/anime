@@ -1,4 +1,4 @@
-export const filterButtonClassNames = "border border-primary rounded p-2 text-primary text-sm font-semibold leading-none py-2 px-[22px] hover:bg-primary hover:text-white"
+export const filterButtonClassNames = "dark:border-white dark:text-white border border-primary rounded p-2 text-primary text-sm font-semibold leading-none py-2 px-[22px] hover:bg-primary hover:text-white dark:hover:border-primary"
 
 export const filters = [{
   text: 'All formats',

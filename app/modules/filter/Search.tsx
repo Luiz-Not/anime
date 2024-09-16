@@ -32,7 +32,7 @@ export default function Search({ query }: { query?: string }) {
     <div className="flex gap-2 w-full m-auto items-center justify-center">
       <div className="relative border border-grayLight max-w-[1000px] w-full rounded text-sm flex">
         <input
-          className="w-full p-2 pr-8 rounded"
+          className="w-full p-2 pr-8 rounded dark:bg-dark"
           type="text"
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}

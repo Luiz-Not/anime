@@ -10,8 +10,7 @@ npm install
 yarn install
 ```
 
-
-Segundo, rode o servidor de desenvolvimento:
+Segundo, execute o servidor de desenvolvimento:
 
 ```bash
 npm run dev
@@ -20,6 +19,8 @@ yarn dev
 ```
 
 Abra [http://localhost:3000](http://localhost:3000) com o seu browser para ver o resultado.
+
+Para versão de produção acesse [https://anime-mu-seven.vercel.app](https://anime-mu-seven.vercel.app)
 
 ## Aprenda mais
 
