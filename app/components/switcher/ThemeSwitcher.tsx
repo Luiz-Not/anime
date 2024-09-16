@@ -1,16 +1,20 @@
 'use client'
 
-import { toggleTheme } from "@/app/lib/actions"
+import Cookies from "js-cookie"
 import { useState } from "react"
 
 export default function ThemeSwitcher({ theme }: { theme?: string }) {
   const [checked, setChecked] = useState(theme === 'dark')
 
-  console.log(checked)
-
   const onChangeHandler = () => {
-    document.getElementsByTagName('html')[0].classList.toggle('dark')
-    toggleTheme(!checked ? 'dark' : 'light')
+    if (!checked) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+
+    Cookies.set('theme', !checked ? 'dark' : '')
+
     setChecked((prevState) => !prevState)
   }
 
